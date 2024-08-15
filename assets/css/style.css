@@ -1692,6 +1692,11 @@ body {
   gap: 1rem;
 }
 
+.review__card p {
+  text-align: start;
+  font-family: var(--ff-poppins);
+}
+
 .review__details img {
   max-width: 50px;
   border-radius: 100%;
@@ -1700,12 +1705,15 @@ body {
 .review__details h4 {
   font-size: 1.5rem;
   color: var(--text-dark);
+  font-family: var(--ff-cuprum);
 }
 
 .review__details h5 {
   font-size: 1.2rem;
   color: var(--text-light);
+  font-family: var(--ff-poppins);
 }
+
 
 
 
