@@ -531,14 +531,6 @@ body {
   margin-block-start: 40px;
 }
 
-.hero .btn-icon {
-  background-color: var(--go-green);
-  color: var(--white);
-  font-size: 20px;
-  padding: 20px;
-  border-radius: 50%;
-  animation: pulse 2s ease infinite;
-}
 
 @keyframes pulse {
   0% {
@@ -1937,5 +1929,180 @@ body {
   
   .btn {
     margin: 0; /* Ensure no extra margins are applied */
+  }
+}
+
+
+
+
+
+
+/* Default FAB styles */
+.fab-container {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 999;
+  cursor: pointer;
+}
+
+.fab-icon-holder {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  background: #016fb9;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.fab-icon-holder:hover {
+  opacity: 0.8;
+}
+
+.fab-icon-holder i {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-style: 25px;
+  color: #fff;
+}
+
+.fab {
+  width: 60px;
+  height: 60px;
+  background: #d23f31;
+}
+
+.fab-options {
+  list-style-type: none;
+  margin: 0;
+  position: absolute;
+  bottom: 70px;
+  right: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: scale(0);
+  transform-origin: 85% bottom;
+}
+
+.fab:hover + .fab-options, .fab-options:hover {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.fab-options li {
+  display: flex;
+  justify-content: flex-end;
+  padding: 5px;
+}
+
+.fab-label {
+  padding: 2px 5px;
+  align-self: center;
+  user-select: none;
+  white-space: nowrap;
+  border-radius: 3px;
+  font-size: 16px;
+  background: #666;
+  color: #fff;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  margin-right: 10px;
+}
+
+.fab-container .btn-icon {
+  background-color: var(--go-green);
+  color: var(--white);
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 50%;
+  animation: pulse 2s ease infinite;
+}
+
+/* Media queries */
+@media (max-width: 1024px) and (min-width: 768px) {
+  .fab-container {
+    bottom: 30px;
+    right: 30px;
+  }
+  
+  .fab-icon-holder {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .fab-icon-holder i {
+    font-size: 20px;
+  }
+  
+  .fab {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .fab-options {
+    bottom: 50px;
+  }
+  
+  .fab-label {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 480px) {
+  .fab-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .fab-icon-holder {
+    width: 35px;
+    height: 35px;
+  }
+  
+  .fab-icon-holder i {
+    font-size: 18px;
+  }
+  
+  .fab {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .fab-options {
+    bottom: 40px;
+  }
+  
+  .fab-label {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 479px) {
+  .fab-container {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .fab-icon-holder {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .fab-icon-holder i {
+    font-size: 16px;
+  }
+  
+  .fab {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .fab-options {
+    bottom: 40px;
+  }
+  
+  .fab-label {
+    font-size: 10px;
+    padding: 1px 3px;
   }
 }
