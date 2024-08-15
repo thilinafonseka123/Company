@@ -874,7 +874,14 @@ body {
   border: 1px solid var(--granite-gray);
   padding: 15px;
   border-radius: var(--radius-5);
+  outline: none;
 }
+
+.email-field:focus{
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
 
 .footer .form-btn {
   background-color: var(--go-green);
@@ -1679,12 +1686,6 @@ body {
   color: var(--extra-light);
 }
 
-.review__card p {
-  margin-bottom: 2rem;
-  color: var(--text-dark);
-  line-height: 2rem;
-}
-
 .review__details {
   display: flex;
   align-items: center;
@@ -1698,13 +1699,11 @@ body {
 
 .review__details h4 {
   font-size: 1.5rem;
-  font-weight: 600;
   color: var(--text-dark);
 }
 
 .review__details h5 {
-  font-size: 1.5rem;
-  font-weight: 400;
+  font-size: 1.2rem;
   color: var(--text-light);
 }
 
@@ -1794,7 +1793,9 @@ body {
   border-radius: 0.25rem;
   width: 100%;
   box-sizing: border-box;
+  font-size: 1.5rem;
   outline: none;
+  font-family: var(--ff-poppins);
 }
 
 .form-input:focus,
